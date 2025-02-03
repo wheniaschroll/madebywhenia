@@ -22,7 +22,7 @@ body, html {
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 auto;
 }
 
 .some-class {
@@ -149,7 +149,7 @@ h5 {
     text-transform: uppercase;
     font-stretch: normal;
     font-style: normal;
-    line-height: 0.5;
+    line-height: 0.2;
     padding: -1px;
     letter-spacing: 1px;
     text-align: auto;
@@ -846,8 +846,8 @@ ul li a:hover {
 .smile-svg {
     bottom: -100px;
     /* adjust position */
-    right: 10px;
-    width: 140px;
+    right: 20px;
+    width: 110px;
     /* adjust size of smile icon */
 }
 
@@ -1248,7 +1248,7 @@ footer p {
     .social-icons {
         justify-content: left;
         margin-left: -10px;
-        padding-top: 15px;
+        padding-bottom: 10px;
     }
 
     .social-icons a {
@@ -1262,7 +1262,8 @@ footer p {
     }
 
     .about-text li {
-        margin-bottom: 6px;
+        margin-bottom: 1px;
+        /* space between list items */
     }
 
     .project-gallery .about-container {
