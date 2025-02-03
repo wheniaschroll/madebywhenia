@@ -160,7 +160,6 @@ h5 {
     font-stretch: normal;
     font-style: normal;
     line-height: 0.1;
-    padding: -1px;
     letter-spacing: 1px;
     text-align: auto;
     color: #000;
@@ -536,13 +535,13 @@ a {
     justify-content: space-between;
     scrollbar-width: thin;
     line-height: 90px;
-    scrollbar-color: #828282 transparent;
+    background-color: transparent;
 }
 
 @media (max-width: 768px) {
 
     .slider-container {
-        scrollbar-color: #828282 transparent;
+        background-color: #424242;
     }
 
 }
@@ -553,13 +552,13 @@ a {
 }
 
 .slider-container::-webkit-scrollbar-thumb {
-    background-color: #828282;
+    background-color: #424242;
     /* color of the scrollbar thumb */
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .slider-container::-webkit-scrollbar-track {
-    background-color: #6c6c6c;
+    background-color: #424242;
     /* color of the scrollbar track */
 }
 
@@ -569,7 +568,7 @@ a {
     height: auto;
     display: inline-block;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     line-height: 40px;
     margin-right: 10px;
@@ -602,7 +601,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #424242;
     /* semi-transparent background */
     color: white;
     padding: 5px;
@@ -1710,6 +1709,17 @@ footer p {
 
 /* responsive design */
 @media (max-width: 768px) {
+
+    h5 {
+        font-family: 'poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-stretch: normal;
+    }
+
+    }
+
     .project-container {
         max-width: 100%;
         margin: 0 auto;
@@ -1752,25 +1762,6 @@ footer p {
         width: 100%;
         margin: 0 auto;
         padding: 0;
-    }
-}
-
-/* Make portfolio collection scrollbar more visible */
-@media (max-width: 480px) {
-    .slider-container::-webkit-scrollbar {
-        height: 10px;
-        /* Increase scrollbar height */
-    }
-
-    .slider-container::-webkit-scrollbar-thumb {
-        background-color: #555;
-        /* Darker color for visibility */
-        border-radius: 5px;
-    }
-
-    .slider-container::-webkit-scrollbar-track {
-        background-color: #ddd;
-        /* Lighter track for contrast */
     }
 }
 
