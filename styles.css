@@ -36,7 +36,7 @@ section {
     max-width: 100%;
     width: 85%;
     margin: 20px auto;
-    padding: 50px;
+    padding: 40px 40px;
     background-color: #f0f0f0;
 }
 
@@ -85,9 +85,18 @@ h1 {
     font-weight: 400%;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.22;
     text-align: auto;
+    line-height: 1.2;
     color: #2d2d2d;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
 }
 
 h2 {
@@ -244,6 +253,8 @@ h5 {
 
 /* mobile menu */
 @media (max-width: 768px) {
+
+
     .nav ul {
         list-style-type: none;
         display: none;
@@ -517,7 +528,15 @@ a {
     justify-content: space-between;
     scrollbar-width: thin;
     line-height: 90px;
-    scrollbar-color: #c7c7c7 transparent;
+    scrollbar-color: #828282 transparent;
+}
+
+@media (max-width: 768px) {
+
+.slider-container {
+    scrollbar-color: #828282 transparent;
+}
+
 }
 
 .slider-container::-webkit-scrollbar {
@@ -526,13 +545,13 @@ a {
 }
 
 .slider-container::-webkit-scrollbar-thumb {
-    background-color: #ccc;
+    background-color: #828282;
     /* color of the scrollbar thumb */
     border-radius: 10px;
 }
 
 .slider-container::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: #6c6c6c;
     /* color of the scrollbar track */
 }
 
@@ -801,6 +820,7 @@ ul li a:hover {
 
 /* extra small screens (portrait phones) */
 @media (max-width: 480px) {
+
     .testimonial p {
         font-size: 16px;
         /* further reduce font size for smaller screens */
@@ -818,6 +838,7 @@ ul li a:hover {
         /* reduce font size for citations on small screens */
     }
 }
+
 
 /* The flip-box container */
 
