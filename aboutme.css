@@ -1,0 +1,435 @@
+/* about me page */
+
+#about-me {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-pic img {
+    width: 300px; /* default: square for large screens */
+    height: 300px;
+    object-fit: cover;
+}
+
+/* enneagream, hobbies and work */
+
+#more-about-me,
+#main-tools {
+    margin-top: -40px;
+    max-width: 100%;
+    width: 85%;
+    padding: 50px;
+}
+
+.tools-container {
+    height: auto;
+    width: fit-content;
+    /* adjust width to fit content */
+    max-width: 80%;
+    /* optional, ensures the container won't stretch beyond this limit */
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    /* allow wrapping if the container is too small */
+    gap: 1px;
+    /* add spacing between the sections */
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    /* center the container */
+}
+
+.articles-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* blockquote styles */
+.blockquoteabout {
+    position: relative;
+    font-style: normal;
+    width: fit-content;
+    padding: 25px;
+    background-color: #fff;
+    color: #555;
+    box-sizing: border-box;
+}
+
+.blockquoteabout::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 6px;
+    height: 50%;
+    background-color: #b5b5b5;
+}
+
+.blockquoteabout p {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 13px;
+    font-style: normal;
+    color: #808080;
+    margin: 0px;
+}
+
+.blockquoteabout cite {
+    padding-left: 10px;
+
+    margin-right: auto;
+    text-align: left;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: -1px;
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+
+    /* container for the whole layout */
+    .containers {
+        flex-direction: column;
+        /* stack sections vertically */
+        align-items: center;
+        /* center everything */
+    }
+
+    /* about me and main tools section */
+    #more-about-me,
+    #main-tools {
+        width: 98%;
+        /* ensures full width but with some margin */
+        padding: 20px;
+    }
+
+    /* articles container */
+
+    .tools-container {
+        position: center;
+        width: 55%;
+        flex-direction: column;
+        /* stack articles vertically */
+        gap: 10px;
+    }
+
+    .articles-container {
+        height: auto;
+        width: fit-content;
+        /* adjust width to fit content */
+        max-width: 80%;
+        /* optional, ensures the container won't stretch beyond this limit */
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        /* allow wrapping if the container is too small */
+        gap: 1px;
+        /* add spacing between the sections */
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+        /* center the container */
+    }
+}
+
+/* blockquote styles for mobile */
+.blockquoteabout {
+    width: 100%;
+    /* ensure blockquote takes full width */
+    padding: 15px;
+}
+
+.blockquoteabout p {
+    font-size: 14px;
+    /* adjust text size for mobile */
+}
+
+.blockquoteabout cite {
+    font-size: 18px;
+    /* smaller font size for citation */
+}
+
+/* medium screens: rectangle shape */
+@media (max-width: 1024px) {
+    .about-pic img {
+        width: 200px; /* wider */
+        height: 400px; /* shorter */
+    }
+}
+
+/* small screens: full width */
+@media (max-width: 768px) {
+.about-pic img {
+    width: 100%; /* make the image fill the container width */
+    height: 100%; /* make the image fill the container height */
+    object-fit: cover; /* ensures the image fills the box without distortion */
+    object-position: center; /* adjusts which part of the image is visible */
+    clip-path: inset(0); /* ensures the image is clipped to the container size */
+    position: absolute; /* keeps the image in place */
+    top: 0; /* aligns the image at the top */
+    left: 0; /* aligns the image on the left */
+    z-index: 2;
+}
+
+/* if you want to prevent the image from overflowing the container */
+.about-pic {
+    position: relative;
+    overflow: hidden; /* this will prevent the image from overflowing */
+    width: 100%; /* set to the width of the container */
+    height: 300px; /* set the height of the container as needed */
+}
+
+}
+
+.about-text h1 {
+    font-family: 'poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    width: 95%;
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #2d2d2d;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: -15px;
+    margin-left: -20px;
+    padding-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f98152;
+}
+
+.project-gallery .about-container ul {
+    list-style-type: none;
+    padding: -2px;
+    margin: 0;
+}
+
+
+.project-gallery .about-container li {
+    border-left: 6px solid #cbcbcb;
+    /* adds a 3px solid black line to the left */
+    list-style-type: none;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+
+/* medium screens (tablets or small desktop - 1024px) */
+@media (max-width: 1024px) {
+    #about-me {
+        padding: 18px;
+        margin: 15px auto;
+    }
+
+    .about-container {
+        flex-direction: row;
+        /* keep items side by side */
+        gap: 30px;
+        /* slightly smaller gap */
+    }
+
+    .social-icons {
+        justify-content: left;
+        padding-top: 15px;
+    }
+
+    .about-text ul {
+        list-style-type: none;
+        /* removes bullet points */
+        padding: 0;
+        /* removes default padding */
+        margin: 0;
+        /* removes default margin */
+    }
+
+    .about-text p,
+    .about-text h1 {
+        margin: 0;
+        /* remove default margins */
+        line-height: 1.6;
+        /* adjust line spacing */
+    }
+
+    .about-text li {
+        margin-bottom: auto;
+        /* space between list items */
+    }
+
+
+    ul.my-list {
+        list-style-type: none;
+        /* removes bullet points */
+        padding: 0;
+        /* removes default padding */
+        margin: 0;
+        /* removes default margin */
+    }
+
+    ul.my-list li {
+        font-size: 16px;
+        /* adjust the font size */
+        line-height: 1.6;
+        /* adjust line spacing for readability */
+        margin-bottom: 10px;
+        /* add spacing between list items */
+    }
+
+}
+
+/* small screens (mobile - 768px) */
+@media (max-width: 768px) {
+    #about-me {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: left;
+        gap: 20px;
+    }
+
+    .about-text h1 {
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    .about-text p {
+        width: 100%;
+        line-height: 1.6;
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .social-icons {
+        justify-content: left;
+        margin-left: -10px;
+        padding-top: 15px;
+    }
+
+    .social-icons a {
+        font-size: 13px;
+    }
+
+    /* mobile bullet points */
+    .about-text ul {
+        font-size: 14px;
+        padding-left: 15px;
+    }
+
+    .about-text li {
+        margin-bottom: 6px;
+    }
+
+    .project-gallery .about-container {
+        display: block;
+        padding: -20px;
+        margin-left: -50px;
+        margin-top: -20px;    }
+    
+    .project-gallery .about-container h5 {
+        font-size: 25px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left; /* aligns the heading text to the left */
+        width: 100%; /* the heading takes up 30% of the width */
+    }
+    
+    .project-gallery .about-container ul {
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+        width: 100%; /* the list takes up the remaining 70% */
+    }
+    
+    .project-gallery .about-container li {
+        border-left: 5px solid #d5d5d5;
+        padding: 20px;
+        margin-left: 0; 
+        margin-bottom: 10px;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+
+}
+
+/* click here to contact button */
+
+.contact-button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* centers vertically */
+    text-align: center;
+}
+
+
+.contact-button {
+    width: 100%;
+    background-color: #005bb5; /* apple-like blue */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px; /* rounded corners */
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+    background-color: #005bb5; /* darker blue on hover */
+    transform: translatey(-2px); /* subtle lift effect */
+}
+
+/* styling for the email description */
+.contact-email {
+    margin-top: 10px;
+    color: #555; /* subtle grey */
+    font-size: 14px;
+}
+
+.contact-email a {
+    color: #0071e3; /* match button color */
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+

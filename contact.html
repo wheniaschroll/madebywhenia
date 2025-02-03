@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page - Whenia Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Use the same CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="header-wrapper">
+        <header class="header">
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav class="nav">
+                <ul>
+                    <a href="/main/">Home</a>
+                    <a href="aboutme.html">About Me</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+        </header>
+        <div>
+
+
+    <!-- Contact Form Section -->
+    <section class="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-title"><h1>contact.</h1></div>
+
+            <form action="#" method="POST" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed and coded by me.<p>
+        <p>&copy; 2025 Whenia Schroll | All rights reserved.</p>
+    </footer>
+
+
+    <script>
+
+        const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav ul');
+
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+});
+
+    </script>
+
+
+</body>
+
+</html>

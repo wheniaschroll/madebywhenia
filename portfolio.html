@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whenia Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+
+    <div class="header-wrapper">
+        <header class="header">
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav class="nav">
+                <ul>
+                    <a href="/main/">Home</a>
+                    <a href="aboutme.html">About Me</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+        </header>
+        <div>
+
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navList = document.querySelector('.nav ul');
+
+                menuToggle.addEventListener('click', () => {
+                    navList.classList.toggle('active');
+                });
+            </script>
+
+
+            <main>
+                <!-- Portfolio Section -->
+                <section id="portfolio">
+                    <div class="portfolio-header">
+
+                        <h2>Portfolio Collection</h2>
+                        <div style="text-align: center;">
+                            <h5>Some of my latest work. <strong>Slide it away!</strong></h5>
+                        </div>
+                    </div>
+
+                    <div class="slider-container">
+                        <div class="slider-box">
+
+                            <a href="project1.html" class="slider-link">
+                                <div class="overlay">
+                                    <span class="clicktosee">Click to See More</span>
+                                </div>
+                                <img src="images/cover1.png" loading="lazy">
+                            </a>
+
+                            <div class="title">An Italian Escape 🍦🛵🍝</div>
+                            <div class="description">Moved to Toro, Italy, to bring this creative project to life.</div>
+                        </div>
+
+                        <div class="slider-box">
+
+                            <a href="project2.html" class="slider-link">
+                                <div class="overlay">
+                                    <span class="clicktosee">Click to See More</span>
+                                </div>
+                                <img src="images/cover2.png" loading="lazy">
+                            </a>
+
+                            <div class="title">Patriotic Fun 🚲🧺🇺🇸</div>
+                            <div class="description">Billboard Illustrations celebrating 4th of July.</div>
+                        </div>
+
+                        <div class="slider-box">
+
+                            <a href="project3.html" class="slider-link">
+                                <div class="overlay">
+                                    <span class="clicktosee">Click to See More</span>
+                                </div>
+                                <img src="images/cover3.png" loading="lazy">
+                            </a>
+
+                            <div class="title">Mother Mayo 🌞🌮🌵</div>
+                            <div class="description">The test that landed me a job at the 4th largest billboard company.
+                            </div>
+                        </div>
+
+                        <div class="slider-box">
+                            <div class="overlay">
+                                <span class="clicktosee">This page is launching soon!
+                                </span>
+                            </div>
+                            <img src="images/cover4.png" loading="lazy">
+
+                            <div class="title">Website Creation 👵🩺💻</div>
+                            <div class="description">Designed this website for a Brazilian geriatrician.</div>
+                        </div>
+
+
+                        <div class="slider-box">
+                            <div class="overlay">
+                                <span class="clicktosee">This page is launching soon!
+                                </span>
+                            </div>
+                            <img src="images/cover5.png" loading="lazy">
+                            <div class="title">Social Media 📸🐕🐾</div>
+                            <div class="description">Social media posts to capture, educate, and connect? Count me in!
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+
+            <footer>
+                <p>Designed and coded by me.
+                <p>
+                <p>&copy; 2025 Whenia Schroll | All rights reserved.</p>
+            </footer>
+
+
+            <script>
+                // Initialize ScrollReveal and add animation to .page-transition
+                ScrollReveal().reveal('.page-transition', {
+                    origin: 'left',  // Animates from the left side
+                    distance: '100px', // How far the element moves
+                    duration: 1000,    // Duration of the animation in milliseconds (1 second)
+                    easing: 'ease',    // Easing function for smoothness
+                    delay: 200         // Delay before the animation starts (in milliseconds)
+                });
+            </script>
+
+            <script>
+                // ScrollReveal for section transitions
+                ScrollReveal().reveal('.page-transition', {
+                    origin: 'top',  // Origin from top
+                    distance: '50px', // Move distance
+                    duration: 1000,    // Animation duration
+                    easing: 'ease',    // Smooth easing function
+                    delay: 200         // Delay before animation starts
+                });
+
+
+                // ScrollReveal for testimonials
+                ScrollReveal().reveal('.testimonial', {
+                    origin: 'left',  // Slide in from left
+                    distance: '100px',
+                    duration: 1000,
+                    delay: 200,
+                    opacity: 0,       // Fade-in effect
+                    reset: true       // Reset when out of view
+                });
+
+                // ScrollReveal for other elements
+                ScrollReveal().reveal('.smile', {
+                    origin: 'right',  // Slide in from right
+                    distance: '50px',
+                    duration: 4000,
+                    delay: 500
+                });
+
+            </script>
+
+
+</body>
+
+</html>
