@@ -149,7 +149,7 @@ h5 {
     text-transform: uppercase;
     font-stretch: normal;
     font-style: normal;
-    line-height: 0.2;
+    line-height: 0.1;
     padding: -1px;
     letter-spacing: 1px;
     text-align: auto;
@@ -732,14 +732,12 @@ ul li a:hover {
 
 .testimonial {
     height: auto;
-    width: 45%;
+    width: auto;
     /* default width for larger screens */
-    padding: 5px;
     background-color: #ffffff;
     color: #000000;
     box-sizing: border-box;
     margin-bottom: 20px;
-    /* space between items */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -747,9 +745,9 @@ ul li a:hover {
 }
 
 .testimonial p {
+    background-color: #ffffff;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 40px;
     margin-bottom: 5px;
 }
 
@@ -757,7 +755,8 @@ ul li a:hover {
     display: block;
     font-style: normal;
     color: #555;
-    margin-bottom: 10px;
+    margin-top: -5px;
+    margin-bottom: 15px;
 }
 
 .testimonial .text {
@@ -778,7 +777,6 @@ ul li a:hover {
 .testimonial p {
     font-size: 20px;
     font-weight: bold;
-    margin-top: 40px;
     margin-bottom: 5px;
     display: flex;
     align-items: center;
@@ -790,7 +788,7 @@ ul li a:hover {
     .testimonial {
         width: 100%;
         /* stack testimonials vertically on mobile */
-        padding: 20px;
+        padding: 0px;
     }
 
     .testimonial p {
@@ -820,6 +818,88 @@ ul li a:hover {
         /* reduce font size for citations on small screens */
     }
 }
+
+/* The flip-box container */
+
+.testimonial {
+    width: 100%;
+    max-width: 500px; /* Adjust the width */
+    height: 290px; /* Adjust the height */
+    margin-left: -10px;
+    perspective: 1000px; /* Enables 3D effect */
+}
+
+
+/* Inner container (used for the flip effect) */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s; /* Flip transition */
+}
+
+/* Front side of the box (Text visible initially) */
+.flip-box-front {
+    background-color:#ffffff;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+/* Back side of the box (Image visible after flip) */
+.flip-box-back {
+    background-color: #222;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg); /* Initially hidden behind the front */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hide the image initially */
+}
+
+/* Image styling for the back side */
+.flip-box-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the box */
+}
+
+/* Text style inside the front box */
+.flip-box-front p,
+.flip-box-front cite,
+.flip-box-front .text {
+    text-align: left;
+    object-fit: cover; /* Ensure the image covers the box */
+
+}
+
+.flip-box-front .read-more-btn {
+    color: #959595;
+    font-weight: bold;
+}
+
+/* The flip effect when clicked */
+.flip-box-inner.flipped {
+    transform: rotateY(180deg); /* Flip the box */
+}
+
+.flip-box-inner.flipped .flip-box-front {
+    opacity: 0; /* Hide the front side when flipped */
+}
+
+.flip-box-inner.flipped .flip-box-back {
+    opacity: 1; /* Show the back side (image) when flipped */
+}
+
+
+
 
 .smile {
     width: 100px;
