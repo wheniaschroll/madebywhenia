@@ -541,14 +541,15 @@ a {
 @media (max-width: 768px) {
 
     .slider-container {
-        background-color: #424242;
+        background-color: transparent;
     }
 
 }
 
 .slider-container::-webkit-scrollbar {
-    height: 8px;
-    /* height of the scrollbar */
+    background-color: #424242;
+    /* color of the scrollbar thumb */
+    border-radius: 0px;
 }
 
 .slider-container::-webkit-scrollbar-thumb {
