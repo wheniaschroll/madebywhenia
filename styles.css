@@ -1527,6 +1527,24 @@ footer p {
 }
 
 
+/* cover picture */
+.cover-picture-container-insta {
+    position: relative;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.cover-picture-container-insta img {
+    margin-top: -130px;
+    margin-bottom: -110px;
+    z-index: 10; /* This will place it on top of .element1 */
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+}
+
+
+
 /* logo and sticker side by side */
 
 .logo-sticker-container {
