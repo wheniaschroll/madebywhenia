@@ -71,6 +71,26 @@
                     });
                 </script>
 
+                <script>
+                    document.querySelector(".contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents the page from refreshing
+
+    let formData = new FormData(this); // Get form data
+
+    fetch("contact.php", {  // Change this if your backend file has a different name
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Message sent!"); // Show success message
+        console.log(data);
+    })
+    .catch(error => console.error("Error:", error));
+});
+
+                </script>
+
 
                 <!-- Portfolio Section -->
                 <section id="portfolio">
@@ -106,7 +126,8 @@
                             </a>
 
                             <div class="title">Patriotic Fun 🚲🧺🇺🇸</div>
-                            <div class="description">Billboard Illustration Campaign for the Fourth of July holiday.</div>
+                            <div class="description">Billboard Illustration Campaign for the Fourth of July holiday.
+                            </div>
                         </div>
 
                         <div class="slider-box">
@@ -125,10 +146,11 @@
 
                         <div class="slider-box">
                             <a href="project4.html" class="slider-link">
-                            <div class="overlay">
-                                <span class="clicktosee">Click to See More</span>
-                            </div>
-                            <img src="images/cover4.png" loading="lazy"></a>
+                                <div class="overlay">
+                                    <span class="clicktosee">Click to See More</span>
+                                </div>
+                                <img src="images/cover4.png" loading="lazy">
+                            </a>
 
                             <div class="title">Web Design 👵🩺💻</div>
                             <div class="description">Website Design for a Brazilian Geriatrician's Clinic.
@@ -138,10 +160,11 @@
 
                         <div class="slider-box">
                             <a href="project5.html" class="slider-link">
-                            <div class="overlay">
-                                <span class="clicktosee">Click to See More!</span>
-                            </div>
-                            <img src="images/cover5.png" loading="lazy"></a>
+                                <div class="overlay">
+                                    <span class="clicktosee">Click to See More!</span>
+                                </div>
+                                <img src="images/cover5.png" loading="lazy">
+                            </a>
                             <div class="title">Social Media ☀️👙🌴</div>
                             <div class="description">Social media content designed to capture, educate, and connect.
                             </div>
@@ -159,35 +182,39 @@
 
                     <div class="testimonials-container">
 
-                        
-                            <div class="testimonialflip" onclick="toggleFlip(this)">
+
+                        <div class="testimonialflip" onclick="toggleFlip(this)">
                             <div class="flip-box-inner">
                                 <!-- Front side (Testimonial Text) -->
                                 <div class="flip-box-front">
                                     <blockquote>
-                                            <p>Antonio Grosso 🇮🇹</p>
-                                <cite>Founder of Hostel San Mercurio in Italy</cite>
-                                <span class="text">Whenia had been an incredible support for the Hostel San Mercurio
-                                    social media strategy. She is very professional and well organized, with a keen
-                                    sense of beauty that helps a lot in her work... Hope to see her again!</span>
+                                        <p>Antonio Grosso 🇮🇹</p>
+                                        <cite>Founder of Hostel San Mercurio in Italy</cite>
+                                        <span class="text">Whenia had been an incredible support for the Hostel San
+                                            Mercurio
+                                            social media strategy. She is very professional and well organized, with a
+                                            keen
+                                            sense of beauty that helps a lot in her work... Hope to see her
+                                            again!</span>
 
-                                    <div style="text-align: right;">
-                                        <h5><a href="https://www.worldpackers.com/users/2990433" class="read-more-btn"
-                                               target="_blank" rel="noopener noreferrer">READ MORE ></a></h5>
-                                    </div>
+                                        <div style="text-align: right;">
+                                            <h5><a href="https://www.worldpackers.com/users/2990433"
+                                                   class="read-more-btn"
+                                                   target="_blank" rel="noopener noreferrer">READ MORE ></a></h5>
+                                        </div>
 
                                     </blockquote>
                                 </div>
-                        
+
                                 <!-- Back side (Image) -->
                                 <div class="flip-box-back">
                                     <img src="images/screenshot-worldpackers.png" alt="Image" />
                                 </div>
                             </div>
-                        
-                    </div>
-                        
-                        
+
+                        </div>
+
+
 
                         <div class="testimonial">
                             <blockquote>
@@ -198,10 +225,10 @@
                                     encountered. Whenia brings a level of creativity and professionalism that is
                                     rare.</span>
 
-                                    <div style="text-align: right;">
-                                        <h5><a href="https://www.linkedin.com/in/whenia-schroll/" class="read-more-btn"
-                                               target="_blank" rel="noopener noreferrer">READ MORE ></a></h5>
-                                    </div>
+                                <div style="text-align: right;">
+                                    <h5><a href="https://www.linkedin.com/in/whenia-schroll/" class="read-more-btn"
+                                           target="_blank" rel="noopener noreferrer">READ MORE ></a></h5>
+                                </div>
 
                             </blockquote>
 
@@ -269,10 +296,10 @@
 
             <script>
 
-function toggleFlip(element) {
-    const flipBoxInner = element.querySelector('.flip-box-inner');
-    flipBoxInner.classList.toggle('flipped');
-}
+                function toggleFlip(element) {
+                    const flipBoxInner = element.querySelector('.flip-box-inner');
+                    flipBoxInner.classList.toggle('flipped');
+                }
 
 
             </script>
