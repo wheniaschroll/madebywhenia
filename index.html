@@ -3,313 +3,305 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whenia Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Whenia Portfolio</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
 
 
-      
+
 </head>
 
 <body>
 
-    <div class="header-wrapper">
-        <header class="header">
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-            <nav class="nav">
-                <ul>
-                    <a href="index.html">Home</a>
-                    <a href="aboutme.html">About Me</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="contact.html">Download Resume</a>
-                </ul>
-            </nav>
-        </header>
-        <div>
-
-            <script>
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navList = document.querySelector('.nav ul');
-
-                menuToggle.addEventListener('click', () => {
-                    navList.classList.toggle('active');
-                });
-            </script>
-
-            <main class="container">
-
-                <!-- Bio Section -->
-                <section id="bio">
-                    <h4>
-                        Brazilian graphic & web designer based in
-                        <s>Charleston, SC,</s> Virginia Beach, VA.
-                    </h4>
-                    <h1>
-                        Designing for enterprises and startups since 2015, with a focus on social media, billboards, web design, and marketing illustrations.
-                    </h1>
-                </section>
-
-
-                <script>
-                    const contactLink = document.getElementById('contact'); // The Contact link in the nav
-                    const contactSection = document.getElementById('contact-section'); // The Contact section
-
-                    // Add an event listener to the Contact link
-                    contactLink.addEventListener('click', function (event) {
-                        event.preventDefault();  // Prevent the default behavior of the link
-
-                        // Toggle visibility of the Contact section
-                        if (contactSection.style.display === 'none' || contactSection.style.display === '') {
-                            contactSection.style.display = 'block'; // Show the Contact section
-                        } else {
-                            contactSection.style.display = 'none'; // Hide the Contact section
-                        }
-                    });
-                </script>
-
-                <script>
-                    document.querySelector(".contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevents the page from refreshing
-
-    let formData = new FormData(this); // Get form data
-
-    fetch("contact.php", {  // Change this if your backend file has a different name
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert("Message sent!"); // Show success message
-        console.log(data);
-    })
-    .catch(error => console.error("Error:", error));
-});
-
-                </script>
-
-
-                <!-- Portfolio Section -->
-                <section id="portfolio">
-                    <div class="portfolio-header">
-
-                        <h2>Portfolio Collection</h2>
-                        <div style="text-align: center;">
-                            <h5>Some of my latest work. <strong>Slide it away!</strong></h5>
-                        </div>
-                    </div>
-
-                    <div class="slider-container">
-                        <div class="slider-box">
-
-                            <a href="project1.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                                <img src="images/cover1.png" loading="lazy">
-                            </a>
-
-                            <div class="title">An Italian Escape 🍦🛵🍝</div>
-                            <div class="description">Moved to Toro, Italy, to bring this creative project to life.</div>
-                        </div>
-
-                        <div class="slider-box">
-
-                            <a href="project2.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                                <img src="images/cover2.png" loading="lazy">
-                            </a>
-
-                            <div class="title">Patriotic Fun 🚲🧺🇺🇸</div>
-                            <div class="description">Billboard Illustration Campaign for the Fourth of July holiday.
-                            </div>
-                        </div>
-
-                        <div class="slider-box">
-
-                            <a href="project3.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                                <img src="images/cover3.png" loading="lazy">
-                            </a>
-
-                            <div class="title">Mother Mayo 🌞🌮🌵</div>
-                            <div class="description">The test that landed me a job at the 4th largest billboard company.
-                            </div>
-                        </div>
-
-                        <div class="slider-box">
-                            <a href="project4.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                                <img src="images/cover4.png" loading="lazy">
-                            </a>
-
-                            <div class="title">Web Design 👵🩺💻</div>
-                            <div class="description">Website Design for a Brazilian Geriatrician's Clinic.
-                            </div>
-                        </div>
-
-
-                        <div class="slider-box">
-                            <a href="project5.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More!</span>
-                                </div>
-                                <img src="images/cover5.png" loading="lazy">
-                            </a>
-                            <div class="title">Social Media ☀️👙🌴</div>
-                            <div class="description">Social media content designed to capture, educate, and connect.
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-
-                <!-- Testimonials Section -->
-                <section id="testimonials">
-
-                    <div class="testimonials-header">
-                        <h2>Recent Testimonials</h2>
-                    </div>
-
-                    <div class="testimonials-container">
-
-
-                        <div class="testimonialflip" onclick="toggleFlip(this)">
-                            <div class="flip-box-inner">
-                                <!-- Front side (Testimonial Text) -->
-                                <div class="flip-box-front">
-                                    <blockquote>
-                                        <p>Antonio Grosso 🇮🇹</p>
-                                        <cite>Founder of Hostel San Mercurio in Italy</cite>
-                                        <span class="text">Whenia had been an incredible support for the Hostel San
-                                            Mercurio
-                                            social media strategy. She is very professional and well organized, with a
-                                            keen
-                                            sense of beauty that helps a lot in her work... Hope to see her
-                                            again!</span>
-
-                                            <break>
-
-                                        <div style="text-align: right;">
-                                            <h5><a href="https://www.worldpackers.com/users/2990433"
-                                                   class="read-more-btn"
-                                                   target="_blank" rel="noopener noreferrer">Read more on Worldpackers >
-</break>
-                                                </a></h5>
-                                        </div>
-
-                                    </blockquote>
-                                </div>
-
-                                <!-- Back side (Image) -->
-                                <div class="flip-box-back">
-                                    <img src="images/screenshot-worldpackers.png" alt="Image" />
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="testimonial">
-                            <blockquote>
-                                <p>Ryan Saul 🇺🇸</p>
-                                <cite>Creative Director at Adams Outdoor</cite>
-                                <span class="text">I had the pleasure of working with Whenia for over a year, and I can
-                                    confidently say she is one of the most talented and dedicated graphic designers I've
-                                    encountered. Whenia brings a level of creativity and professionalism that is
-                                    rare.</span>
-
-                                <div style="text-align: right;">
-                                    <h5><a href="https://www.linkedin.com/in/whenia-schroll/" class="read-more-btn"
-                                           target="_blank" rel="noopener noreferrer">READ MORE on LINKEDIN ></a></h5>
-                                </div>
-
-                            </blockquote>
-
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="smile">
-                        <img src="images/=).svg" alt="smiling face" class="smile-svg">
-                    </div>
-                </section>
-
-            </main>
-
-            <footer>
-                <p>&copy; All rights reserved.</p>
-                <p>2025 Designed by Whenia Schroll.</p>
-            </footer>
-
-
-            <script>
-                // Initialize ScrollReveal and add animation to .page-transition
-                ScrollReveal().reveal('.page-transition', {
-                    origin: 'left',  // Animates from the left side
-                    distance: '100px', // How far the element moves
-                    duration: 1000,    // Duration of the animation in milliseconds (1 second)
-                    easing: 'ease',    // Easing function for smoothness
-                    delay: 200         // Delay before the animation starts (in milliseconds)
-                });
-            </script>
-
-            <script>
-                // ScrollReveal for section transitions
-                ScrollReveal().reveal('.page-transition', {
-                    origin: 'top',  // Origin from top
-                    distance: '50px', // Move distance
-                    duration: 1000,    // Animation duration
-                    easing: 'ease',    // Smooth easing function
-                    delay: 200         // Delay before animation starts
-                });
-
-
-                // ScrollReveal for testimonials
-                ScrollReveal().reveal('.testimonial', {
-                    origin: 'left',  // Slide in from left
-                    distance: '100px',
-                    duration: 1000,
-                    delay: 200,
-                    opacity: 0,       // Fade-in effect
-                    reset: true       // Reset when out of view
-                });
-
-                // ScrollReveal for other elements
-                ScrollReveal().reveal('.smile', {
-                    origin: 'right',  // Slide in from right
-                    distance: '50px',
-                    duration: 4000,
-                    delay: 500
-                });
-
-            </script>
-
-            <script>
-
-                function toggleFlip(element) {
-                    const flipBoxInner = element.querySelector('.flip-box-inner');
-                    flipBoxInner.classList.toggle('flipped');
-                }
-
-
-            </script>
+	<div class="header-wrapper">
+		<header class="header">
+
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+			<button class="menu-toggle" aria-label="Toggle menu">☰</button>
+			<nav class="nav">
+				<ul>
+					<a href="index.html">Home</a>
+					<a href="aboutme.html">About Me</a>
+					<a href="portfolio.html">Portfolio</a>
+					<a href="contact.html">Contact</a>
+					<a href="contact.html">Download Resume</a>
+				</ul>
+			</nav>
+		</header>
+		<div>
+
+			<script>
+				const menuToggle = document.querySelector('.menu-toggle');
+				const navList = document.querySelector('.nav ul');
+
+				menuToggle.addEventListener('click', () => {
+					navList.classList.toggle('active');
+				});
+			</script>
+
+			<main class="container">
+
+				<!-- Bio Section -->
+				<section id="bio">
+					<h4>
+						Brazilian graphic & web designer based in
+						<s>Charleston, SC,</s> Virginia Beach, VA.
+					</h4>
+					<h1>
+						Designing for enterprises and startups since 2015, with a focus on social media, billboards, web
+						design, and marketing illustrations.
+					</h1>
+				</section>
+
+
+				<script>
+					const contactLink = document.getElementById('contact'); // The Contact link in the nav
+					const contactSection = document.getElementById('contact-section'); // The Contact section
+
+					// Add an event listener to the Contact link
+					contactLink.addEventListener('click', function (event) {
+						event.preventDefault();  // Prevent the default behavior of the link
+
+						// Toggle visibility of the Contact section
+						if (contactSection.style.display === 'none' || contactSection.style.display === '') {
+							contactSection.style.display = 'block'; // Show the Contact section
+						} else {
+							contactSection.style.display = 'none'; // Hide the Contact section
+						}
+					});
+				</script>
+
+				<script>
+					document.querySelector(".contact-form").addEventListener("submit", function (event) {
+						event.preventDefault(); // Prevents the page from refreshing
+
+						let formData = new FormData(this); // Get form data
+
+						fetch("contact.php", {  // Change this if your backend file has a different name
+							method: "POST",
+							body: formData
+						})
+							.then(response => response.text())
+							.then(data => {
+								alert("Message sent!"); // Show success message
+								console.log(data);
+							})
+							.catch(error => console.error("Error:", error));
+					});
+
+				</script>
+
+
+				<!-- Portfolio Section -->
+				<section id="portfolio">
+					<div class="portfolio-header">
+
+						<h2>Portfolio Collection</h2>
+						<div style="text-align: center;">
+							<h5>Some of my latest work. <strong>Slide it away!</strong></h5>
+						</div>
+					</div>
+
+					<div class="slider-container">
+						<div class="slider-box">
+
+							<a href="project1.html" class="slider-link">
+								<div class="overlay">
+									<span class="clicktosee">Click to See More</span>
+								</div>
+								<img src="images/cover1.png" loading="lazy">
+							</a>
+
+							<div class="title">An Italian Escape 🍦🛵🍝</div>
+							<div class="description">Moved to Toro, Italy, to bring this creative project to life.</div>
+						</div>
+
+						<div class="slider-box">
+
+							<a href="project2.html" class="slider-link">
+								<div class="overlay">
+									<span class="clicktosee">Click to See More</span>
+								</div>
+								<img src="images/cover2.png" loading="lazy">
+							</a>
+
+							<div class="title">Patriotic Fun 🚲🧺🇺🇸</div>
+							<div class="description">Billboard Illustration Campaign for the Fourth of July holiday.
+							</div>
+						</div>
+
+						<div class="slider-box">
+
+							<a href="project3.html" class="slider-link">
+								<div class="overlay">
+									<span class="clicktosee">Click to See More</span>
+								</div>
+								<img src="images/cover3.png" loading="lazy">
+							</a>
+
+							<div class="title">Mother Mayo 🌞🌮🌵</div>
+							<div class="description">The test that landed me a job at the 4th largest billboard company.
+							</div>
+						</div>
+
+						<div class="slider-box">
+							<a href="project4.html" class="slider-link">
+								<div class="overlay">
+									<span class="clicktosee">Click to See More</span>
+								</div>
+								<img src="images/cover4.png" loading="lazy">
+							</a>
+
+							<div class="title">Web Design 👵🩺💻</div>
+							<div class="description">Website Design for a Brazilian Geriatrician's Clinic.
+							</div>
+						</div>
+
+
+						<div class="slider-box">
+							<a href="project5.html" class="slider-link">
+								<div class="overlay">
+									<span class="clicktosee">Click to See More!</span>
+								</div>
+								<img src="images/cover5.png" loading="lazy">
+							</a>
+							<div class="title">Social Media ☀️👙🌴</div>
+							<div class="description">Social media content designed to capture, educate, and connect.
+							</div>
+						</div>
+					</div>
+
+				</section>
+
+				<!-- Testimonials Section -->
+				<section id="testimonials">
+
+					<div class="testimonials-header">
+						<h2>Recent Testimonials</h2>
+					</div>
+
+					<div class="testimonials-container">
+
+
+						<div class="testimonialflip" onclick="toggleFlip(this)">
+							<div class="flip-box-inner">
+											<!-- Front side (Testimonial Text) -->
+											<div class="flip-box-front">
+															<blockquote>
+																			<p>Antonio Grosso 🇮🇹</p>
+																			<cite>Founder of Hostel San Mercurio in Italy</cite>
+																			<span class="text-testimonial">Whenia had been an incredible support for the Hostel San Mercurio social media strategy. She is very professional and well organized, with a keen sense of beauty that helps a lot in her work... Hope to see her again! 
+																			<div class="taphere">(Tap here to reveal the original)</div>
+																			<div class="readmore-testimonial">
+																							<a href="https://www.worldpackers.com/users/2990433" class="read-more-btn" target="_blank" rel="noopener noreferrer">or Read more on Worldpackers ></a>
+																			</div>
+																			</span>
+															</blockquote>
+											</div>
+			
+											<!-- Back side (Image) -->
+											<div class="flip-box-back">
+															<img src="images/screenshot-worldpackers.png" alt="Image" />
+											</div>
+							</div>
+			</div>
+			
+
+
+
+					<div class="testimonial">
+						<blockquote>
+							<p>Ryan Saul 🇺🇸</p>
+							<cite>Creative Director at Adams Outdoor</cite>
+							<span class="text">I had the pleasure of working with Whenia for over a year, and I can
+								confidently say she is one of the most talented and dedicated graphic designers I've
+								encountered. Whenia brings a level of creativity and professionalism that is
+								rare.</span>
+
+							<div class="readmore-testimonial">
+								<a href="https://www.linkedin.com/in/whenia-schroll/"
+												class="read-more-btn"
+												target="_blank" rel="noopener noreferrer">Read more on
+										LinkedIn ></a>
+				</div>
+
+						</blockquote>
+
+
+					</div>
+
+
+		</div>
+
+		<div class="smile">
+			<img src="images/=).svg" alt="smiling face" class="smile-svg">
+		</div>
+		</section>
+
+		</main>
+
+		<footer>
+			<p>&copy; All rights reserved.</p>
+			<p>2025 Designed by Whenia Schroll.</p>
+		</footer>
+
+
+		<script>
+			// Initialize ScrollReveal and add animation to .page-transition
+			ScrollReveal().reveal('.page-transition', {
+				origin: 'left',  // Animates from the left side
+				distance: '100px', // How far the element moves
+				duration: 1000,    // Duration of the animation in milliseconds (1 second)
+				easing: 'ease',    // Easing function for smoothness
+				delay: 200         // Delay before the animation starts (in milliseconds)
+			});
+		</script>
+
+		<script>
+			// ScrollReveal for section transitions
+			ScrollReveal().reveal('.page-transition', {
+				origin: 'top',  // Origin from top
+				distance: '50px', // Move distance
+				duration: 1000,    // Animation duration
+				easing: 'ease',    // Smooth easing function
+				delay: 200         // Delay before animation starts
+			});
+
+
+			// ScrollReveal for testimonials
+			ScrollReveal().reveal('.testimonial', {
+				origin: 'left',  // Slide in from left
+				distance: '100px',
+				duration: 1000,
+				delay: 200,
+				opacity: 0,       // Fade-in effect
+				reset: true       // Reset when out of view
+			});
+
+			// ScrollReveal for other elements
+			ScrollReveal().reveal('.smile', {
+				origin: 'right',  // Slide in from right
+				distance: '50px',
+				duration: 4000,
+				delay: 500
+			});
+
+		</script>
+
+		<script>
+
+			function toggleFlip(element) {
+				const flipBoxInner = element.querySelector('.flip-box-inner');
+				flipBoxInner.classList.toggle('flipped');
+			}
+
+
+		</script>
 
 
 </body>
