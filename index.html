@@ -10,6 +10,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
+
+
+
 
 
 
@@ -19,44 +27,51 @@
 
 	<div class="header-wrapper">
 		<header class="header">
+			<div class="name-logo">
+				<h5>Whenia Schroll</h5>
+				<div class="social-icons">
 
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+					<a href="https://www.behance.net/wheniaschroll" target="_blank" loading="lazy"><i class="fa-brands fa-behance"></i></a>
+					<a href="instagram.com/madebywhenia" target="_blank" loading="lazy"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/in/whenia-schroll/" target="_blank" loading="lazy"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="https://www.pinterest.com/madebywhenia/" target="_blank" loading="lazy"><i class="fa-brands fa-pinterest"></i></a>
+
+	</div>
+	
+</div>
+
 
 			<button class="menu-toggle" aria-label="Toggle menu">☰</button>
 			<nav class="nav">
 				<ul>
 					<a href="index.html">Home</a>
-					<a href="aboutme.html">About Me</a>
-					<a href="portfolio.html">Portfolio</a>
+					<a href="aboutme.html">About</a>
+					<a href="contact.html">Resume</a>
 					<a href="contact.html">Contact</a>
-					<a href="contact.html">Download Resume</a>
 				</ul>
 			</nav>
 		</header>
 		<div>
 
-			<script>
-				const menuToggle = document.querySelector('.menu-toggle');
-				const navList = document.querySelector('.nav ul');
-
-				menuToggle.addEventListener('click', () => {
-					navList.classList.toggle('active');
-				});
-			</script>
-
 			<main class="container">
 
 				<!-- Bio Section -->
+
 				<section id="bio">
-					<h4>
+
+				<h4>
 						Brazilian graphic & web designer based in
-						<s>Charleston, SC,</s> Virginia Beach, VA.
+						<s>Charleston, SC</s><span style="font-size: 25px; font-weight: 500; font-family: 'Liu Jian Mao Cao', cursive; letter-spacing: 0px; padding: 5px; color: #829C95; ">Virginia Beach.</span>
 					</h4>
+
 					<h1>
 						Designing for enterprises and startups since 2015, with a focus on social media, billboards, web
 						design, and marketing illustrations.
 					</h1>
-				</section>
+				
+			</section>
 
 
 				<script>
@@ -102,10 +117,11 @@
 					<div class="portfolio-header">
 
 						<h2>Portfolio Collection</h2>
-						<div style="text-align: center;">
-							<h5>Some of my latest work. <strong>Slide it away!</strong></h5>
-						</div>
-					</div>
+
+					<h4>
+						<span style="font-size: 27px; font-weight: 500;    font-family: 'Liu Jian Mao Cao', cursive; letter-spacing: 0px; padding: 5px; color: #829C95; ">Slide it away,</span> here are some of my latest work.
+					</h4>
+
 
 					<div class="slider-container">
 						<div class="slider-box">
@@ -117,7 +133,7 @@
 								<img src="images/cover1.png" loading="lazy">
 							</a>
 
-							<div class="title">An Italian Escape 🍦🛵🍝</div>
+							<div class="title">An Italian Escape</div>
 							<div class="description">Moved to Toro, Italy, to bring this creative project to life.</div>
 						</div>
 
@@ -130,7 +146,7 @@
 								<img src="images/cover2.png" loading="lazy">
 							</a>
 
-							<div class="title">Patriotic Fun 🚲🧺🇺🇸</div>
+							<div class="title">Patriotic Fun</div>
 							<div class="description">Billboard Illustration Campaign for the Fourth of July holiday.
 							</div>
 						</div>
@@ -144,7 +160,7 @@
 								<img src="images/cover3.png" loading="lazy">
 							</a>
 
-							<div class="title">Mother Mayo 🌞🌮🌵</div>
+							<div class="title">Mother Mayo</div>
 							<div class="description">The test that landed me a job at the 4th largest billboard company.
 							</div>
 						</div>
@@ -157,7 +173,7 @@
 								<img src="images/cover4.png" loading="lazy">
 							</a>
 
-							<div class="title">Web Design 👵🩺💻</div>
+							<div class="title">Web Design</div>
 							<div class="description">Website Design for a Brazilian Geriatrician's Clinic.
 							</div>
 						</div>
@@ -170,7 +186,7 @@
 								</div>
 								<img src="images/cover5.png" loading="lazy">
 							</a>
-							<div class="title">Social Media ☀️👙🌴</div>
+							<div class="title">Social Media</div>
 							<div class="description">Social media content designed to capture, educate, and connect.
 							</div>
 						</div>
@@ -178,12 +194,11 @@
 
 				</section>
 
+
 				<!-- Testimonials Section -->
 				<section id="testimonials">
 
-					<div class="testimonials-header">
 						<h2>Recent Testimonials</h2>
-					</div>
 
 					<div class="testimonials-container">
 
@@ -195,9 +210,9 @@
 															<blockquote>
 																			<p>Antonio Grosso 🇮🇹</p>
 																			<cite>Founder of Hostel San Mercurio in Italy</cite>
-																			<span class="text-testimonial">Whenia had been an incredible support for the Hostel San Mercurio social media strategy. She is very professional and well organized, with a keen sense of beauty that helps a lot in her work... Hope to see her again! 
-																			<div class="taphere">(Tap here to reveal the original)</div>
-																			<div class="readmore-testimonial">
+																			<span class="text-testimonial">Whenia had been an incredible support for the Hostel San Mercurio social media strategy. She is very professional and well organized, with a keen sense of beauty that helps a lot in her work... Hope to see her again! (TAP HERE TO REVEAL)
+
+																			<div class="readmore-testimonials">
 																							<a href="https://www.worldpackers.com/users/2990433" class="read-more-btn" target="_blank" rel="noopener noreferrer">or Read more on Worldpackers ></a>
 																			</div>
 																			</span>
@@ -210,45 +225,68 @@
 											</div>
 							</div>
 			</div>
-			
+	
 
 
-
-					<div class="testimonial">
+					<div class="testimonials">
 						<blockquote>
 							<p>Ryan Saul 🇺🇸</p>
 							<cite>Creative Director at Adams Outdoor</cite>
-							<span class="text">I had the pleasure of working with Whenia for over a year, and I can
+							<text>I had the pleasure of working with Whenia for over a year, and I can
 								confidently say she is one of the most talented and dedicated graphic designers I've
 								encountered. Whenia brings a level of creativity and professionalism that is
-								rare.</span>
+								rare.</text>
 
-							<div class="readmore-testimonial">
+							<div class="readmore-testimonials">
 								<a href="https://www.linkedin.com/in/whenia-schroll/"
 												class="read-more-btn"
 												target="_blank" rel="noopener noreferrer">Read more on
-										LinkedIn ></a>
+										LinkedIn ></a></div>
+									</blockquote>
 				</div>
 
-						</blockquote>
+			</section>
 
 
-					</div>
+			<section id="more-about-me">
+    
+    <div class="content-wrapper">
+					
+        <!-- Left Side: Articles -->
+        <div class="articles-container">
+									<h2>More about me</h2>
+            <article class="blockquoteabout enneagram">
+                <p>Enneagram</p>
+                <cite>Type 9 🌿️</cite>
+            </article>
+
+            <article class="blockquoteabout strength">
+                <p>Top Strength</p>
+                <cite>Adaptability ⚖️</cite>
+            </article>
+
+            <article class="blockquoteabout work-value">
+                <p>Top 1. Work Value</p>
+                <cite>Accountability 🧩</cite>
+            </article>
+        </div>
+
+</section>
 
 
-		</div>
-
-		<div class="smile">
-			<img src="images/=).svg" alt="smiling face" class="smile-svg">
-		</div>
-		</section>
+<div class="footer-wrapper">
+	<div class="mimoji">
+			<img src="images/mimoji.png" alt="Mimoji Image" class="mimoji-image">
+	</div>
+	<footer>
+		<p>&copy; All rights reserved. 2025 Designed by Whenia Schroll.</p>
+	</footer>
+</div>
+															
 
 		</main>
 
-		<footer>
-			<p>&copy; All rights reserved.</p>
-			<p>2025 Designed by Whenia Schroll.</p>
-		</footer>
+	
 
 
 		<script>
@@ -302,6 +340,16 @@
 
 
 		</script>
+
+
+<script>
+	const menuToggle = document.querySelector('.menu-toggle');
+	const navList = document.querySelector('.nav ul');
+
+	menuToggle.addEventListener('click', () => {
+		navList.classList.toggle('active');
+	});
+</script>
 
 
 </body>
