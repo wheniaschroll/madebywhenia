@@ -1693,7 +1693,6 @@ footer p {
 
 
     .project-gallery {
-        background-color: #005bb5;
         margin: auto;
     }
 
@@ -2136,7 +2135,7 @@ footer p {
     }
 
     .text-container {
-        width: auto;
+        width: 100%;
     }
 
     .mini-pictures-container {
