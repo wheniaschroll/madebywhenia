@@ -1693,7 +1693,7 @@ footer p {
 
 
     .project-gallery {
-        margin: auto;
+        margin-left: -40px;
     }
 
     .about-container h2 {
@@ -1862,7 +1862,6 @@ footer p {
 
 /* project 1,2,3 page */
 
-
 .project-container {
     max-width: 100%;
     margin: 0 auto;
@@ -1871,7 +1870,7 @@ footer p {
 }
 
 .project-title {
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding-top: 50px;
     text-align: center;
     font-size: 32px;
@@ -1881,26 +1880,10 @@ footer p {
 .project-description {
     width: 65%;
     margin: 0 auto 40px;
-    /* more bottom space */
     text-align: center;
     font-size: 20px;
     line-height: 1.6;
 }
-
-/* cover picture */
-.cover-picture-container-about {
-    text-align: center;
-    background-color: #ffffff;
-    margin-top: auto;
-}
-
-.cover-picture-container-about img {
-    background-color: #ffffff;
-    margin-bottom: 15px;
-    width: 100%;
-    height: auto;
-}
-
 
 /* cover picture */
 .cover-picture-container {
@@ -1909,81 +1892,62 @@ footer p {
 }
 
 .cover-picture-container img {
-    margin-bottom: 0;
     width: 100%;
     max-width: 1920px;
     height: auto;
 }
 
-
-/* cover picture */
+/* Instagram specific cover image */
 .cover-picture-container-insta {
-    position: relative;
     text-align: center;
     margin-top: 25px;
+    position: relative;
+    z-index: 10;
 }
 
 .cover-picture-container-insta img {
     margin-top: -130px;
     margin-bottom: -110px;
-    z-index: 10; /* This will place it on top of .element1 */
     width: 100%;
     max-width: 1920px;
     height: auto;
 }
 
-
-
-/* logo and sticker side by side */
-
+/* Logo and sticker side by side */
 .logo-sticker-container {
     display: flex;
     justify-content: center;
-    /* centering images */
     align-items: center;
-    /* aligning images vertically */
     gap: 20px;
-    /* space between the images */
     flex-wrap: wrap;
-    /* allows wrapping on smaller screens */
-    margin-top: -50px;
-    margin-bottom: -50px;
+    margin: -50px 0;
 }
 
 .logo-sticker-container div {
     flex: 1 1 45%;
-    /* each takes up about half the width */
     max-width: 862px;
     text-align: center;
-    /* centers images inside divs */
 }
 
 .logo-sticker-container img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
 }
 
-
-/* mini picture - now same size as cover-pic */
-
+/* Mini pictures */
 .mini-picture-container {
     text-align: center;
-    margin-top: -50px;
-    margin-bottom: -50px;
+    margin: -50px 0;
 }
 
 .mini-picture-container img {
     width: 100%;
     max-width: 1920px;
     height: auto;
-    object-fit: cover;
 }
 
-
-/* mid-big picture */
-
+/* Mid-big picture */
 .mid-big-container {
     text-align: center;
     margin-bottom: 40px;
@@ -1995,48 +1959,38 @@ footer p {
     height: auto;
 }
 
-/* instagram & workspace images - side by side */
-
+/* Instagram & workspace images - side by side */
 .project-gallery {
     display: flex;
     justify-content: center;
-    /* centering images */
     align-items: center;
-    /* aligning images vertically */
     gap: 20px;
-    /* space between images */
     flex-wrap: wrap;
-    /* ensures responsiveness */
-    margin-bottom: auto;
 }
 
+/* Image container */
 .image-container {
     flex: 1 1 45%;
-    /* each takes up almost half the width */
     max-width: 863px;
-    /* ensuring images don't exceed original size */
     text-align: center;
 }
 
 .image-container img {
     width: 100%;
-    /* make images fill the container */
     height: auto;
-    /* maintain aspect ratio */
-    object-fit: cover;
     display: block;
 }
 
-
-/* text sections */
+/* Text sections */
 .text-container {
     width: 85%;
-    margin-top: -15px;
+    max-width: 1000px;
     padding: 40px;
     background-color: #ffffff;
+    text-align: left;
 }
 
-/* bullet points */
+/* Bullet points */
 .text-container ul {
     list-style-type: disc;
     padding-left: 20px;
@@ -2049,7 +2003,7 @@ footer p {
     padding: 5px 0;
 }
 
-/* project details */
+/* Project details */
 .project-details {
     background: #e3e3e3;
     padding: 30px;
@@ -2066,8 +2020,7 @@ footer p {
     font-size: 18px;
 }
 
-/* next portfolio button */
-
+/* Next portfolio button */
 .next-button {
     display: inline-flex;
     align-items: center;
@@ -2075,7 +2028,6 @@ footer p {
     font-size: 15px;
     font-weight: 500;
     color: #333;
-    /* dark gray for readability */
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 50px;
@@ -2084,39 +2036,61 @@ footer p {
     background-color: transparent;
     position: fixed;
     bottom: 20px;
-    margin-bottom: 200px;
-    backdrop-filter: blur(10px);
-    /* subtle glass effect */
-    right: 10px;
-    /* move the button to the right side */
+    right: 20px;
     z-index: 1000;
-    /* keeps it on top of other elements */
+    backdrop-filter: blur(10px);
 }
 
-/* arrow symbol */
+/* Arrow symbol */
 .next-button::before {
     content: "";
     font-size: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* hover effects */
+/* Hover effects */
 .next-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    /* light hover effect */
     border-color: rgba(0, 0, 0, 0.4);
-    transform: translatey(-1px);
+    transform: translateY(-2px);
 }
 
-/* slight movement on hover */
 .next-button:hover::before {
-    transform: translatex(-3px);
-    /* moves arrow left on hover */
+    transform: translateX(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-description {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .text-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .next-button {
+        font-size: 14px;
+        padding: 8px 15px;
+        right: 10px;
+    }
 }
 
 
 /* responsive design */
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 480px)  {
+
+    .logo-sticker-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: -50px -40px;
+    }
+
 
     h5 {
         font-family: 'poppins', sans-serif;
@@ -2126,32 +2100,17 @@ footer p {
         font-stretch: normal;
     }
 
-    }
 
-    .project-container {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0;
+    .mini-picture-container img {
+        margin-left: -85px;
     }
-
-    .text-container {
-        width: 100%;
-    }
-
-    .mini-pictures-container {
-        flex-direction: column;
-        align-items: center;
-    }
+    
 
     .mini-pic {
         width: 100%;
     }
 
-    .project-details {
-        padding: 20px;
-        margin-top: 40px;
-    }
-
+}
 
 
 
