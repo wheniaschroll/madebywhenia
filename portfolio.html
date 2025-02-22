@@ -2,174 +2,157 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+	<title>Whenia Portfolio</title>
 	<link rel="stylesheet" href="styles.css">
+
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-</head>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
 
+
+
+   <style>
+
+        .swiper-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            animation: scrollImages 30s linear infinite;
+        }
+
+        .swiper-slide {
+            flex: 0 0 auto;
+            margin-right: 10px;
+        }
+
+        .swiper-slide img {
+            width: 250px; /* Adjust image size */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .swiper-slide img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Keyframe animation for scrolling */
+        @keyframes scrollImages {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Container to ensure scrolling works with 4 images visible */
+        .image-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+    </style>
+</head>
 <body>
 
-    <div class="header-wrapper">
-        <header class="header">
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-            <nav class="nav">
-                <ul>
-                    <a href="index.html">Home</a>
-                    <a href="aboutme.html">About Me</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="https://www.figma.com/design/8YXFRqR2zQfoqK747lY0XR/Whenia%2C-CV'2025?node-id=0-1&p=f">Download Resume</a>
-                </ul>
-            </nav>
-        </header>
-        <div>
-
-            <script>
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navList = document.querySelector('.nav ul');
-
-                menuToggle.addEventListener('click', () => {
-                    navList.classList.toggle('active');
-                });
-            </script>
+	<div class="header-wrapper">
+		<header class="header">
+			<div class="name-logo">
+				<h5>Whenia Schroll</h5>
+				<div class="social-icons">
 
 
-            <main>
-                <!-- Portfolio Section -->
-                <section id="portfolio">
-                    <div class="portfolio-header">
 
-                        <h2>Portfolio Collection</h2>
-                        <div style="text-align: center;">
-                            <h5>Some of my latest work. <strong>Slide it away!</strong></h5>
-                        </div>
-                    </div>
+					<a href="https://www.behance.net/wheniaschroll" target="_blank" loading="lazy"><i class="fa-brands fa-behance"></i></a>
+					<a href="https://www.instagram.com/madebywhenia" target="_blank" loading="lazy"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/in/whenia-schroll/" target="_blank" loading="lazy"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="https://www.pinterest.com/madebywhenia/" target="_blank" loading="lazy"><i class="fa-brands fa-pinterest"></i></a>
 
-                    <div class="slider-container">
-                        <div class="slider-box">
-
-                            <a href="project1.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                                <img src="images/cover1.png" loading="lazy">
-                            </a>
-
-                            <div class="title">An Italian Escape 🍦🛵🍝</div>
-                            <div class="description">Moved to Toro, Italy, to bring this creative project to life.</div>
-                        </div>
-
-                        <div class="slider-box">
-
-                            <a href="project2.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                                <img src="images/cover2.png" loading="lazy">
-                            </a>
-
-                            <div class="title">Patriotic Fun 🚲🧺🇺🇸</div>
-                            <div class="description">Billboard Illustration Campaign for the Fourth of July holiday.</div>
-                        </div>
-
-                        <div class="slider-box">
-
-                            <a href="project3.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                                <img src="images/cover3.png" loading="lazy">
-                            </a>
-
-                            <div class="title">Mother Mayo 🌞🌮🌵</div>
-                            <div class="description">The test that landed me a job at the 4th largest billboard company.
-                            </div>
-                        </div>
-
-                        <div class="slider-box">
-                            <a href="project4.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                            <img src="images/cover4.png" loading="lazy">
-
-                            <div class="title">Web Design 👵🩺💻</div>
-                            <div class="description">Website Design for a Brazilian Geriatrician's Clinic.</div>
-                        </div>
+	</div>
+	
+</div>
 
 
-                        <div class="slider-box">
-                            <a href="project5.html" class="slider-link">
-                                <div class="overlay">
-                                    <span class="clicktosee">Click to See More</span>
-                                </div>
-                            <img src="images/cover5.png" loading="lazy">
-                            <div class="title">Social Media ☀️👙🌴</div>
-                            <div class="description">Social media content designed to capture, educate, and connect.
-                            </div>
-                        </div>
-                    </div>
+			<button class="menu-toggle" aria-label="Toggle menu">☰</button>
+			<nav class="nav">
+				<ul>
+					<a href="index.html">Home</a>
+					<a href="aboutme.html">About</a>
+					<a href="https://surl.li/muaiyk">Resume</a>
+					<a href="contact.html">Contact</a>
+				</ul>
+			</nav>
+		</header>
+		<div>
 
-                </section>
+			<main class="container">
+    <!-- Billboard Designs -->
+    <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 text-center">Billboard Designs</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/billboard1.jpg" alt="Billboard 1"></div>
+                <div class="swiper-slide"><img src="images/billboard2.jpg" alt="Billboard 2"></div>
+                <div class="swiper-slide"><img src="images/billboard3.jpg" alt="Billboard 3"></div>
+                <div class="swiper-slide"><img src="images/billboard4.jpg" alt="Billboard 4"></div>
+                <div class="swiper-slide"><img src="images/billboard5.jpg" alt="Billboard 5"></div>
+                <div class="swiper-slide"><img src="images/billboard6.jpg" alt="Billboard 6"></div>
+                <div class="swiper-slide"><img src="images/billboard7.jpg" alt="Billboard 7"></div>
+                <div class="swiper-slide"><img src="images/billboard8.jpg" alt="Billboard 8"></div>
+            </div>
+        </div>
+    </section>
 
-            </main>
+    <!-- Logo Designs -->
+    <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 text-center">Logo Designs</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/logo1.jpg" alt="Logo 1"></div>
+                <div class="swiper-slide"><img src="images/logo2.jpg" alt="Logo 2"></div>
+                <div class="swiper-slide"><img src="images/logo3.jpg" alt="Logo 3"></div>
+                <div class="swiper-slide"><img src="images/logo4.jpg" alt="Logo 4"></div>
+                <div class="swiper-slide"><img src="images/logo5.jpg" alt="Logo 5"></div>
+            </div>
+        </div>
+    </section>
 
-            <footer>
-                <p>&copy; All rights reserved.</p>
-                <p>2025 Designed by Whenia Schroll </p>
-            </footer>
+    <!-- Illustration Designs -->
+    <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 text-center">Illustration Designs</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/illustration1.png" alt="Illustration 1"></div>
+                <div class="swiper-slide"><img src="images/illustration3.jpg" alt="Illustration 3"></div>
+                <div class="swiper-slide"><img src="images/illustration4.jpg" alt="Illustration 4"></div>
+                <div class="swiper-slide"><img src="images/illustration5.jpg" alt="Illustration 5"></div>
+                <div class="swiper-slide"><img src="images/illustration6.jpg" alt="Illustration 6"></div>
+                <div class="swiper-slide"><img src="images/illustration2.png" alt="Illustration 2"></div>
+                <div class="swiper-slide"><img src="images/illustration7.jpg" alt="Illustration 7"></div>
+                <div class="swiper-slide"><img src="images/illustration8.jpg" alt="Illustration 8"></div>
+            </div>
+        </div>
+    </section>
+</main>
 
-
-            <script>
-                // Initialize ScrollReveal and add animation to .page-transition
-                ScrollReveal().reveal('.page-transition', {
-                    origin: 'left',  // Animates from the left side
-                    distance: '100px', // How far the element moves
-                    duration: 1000,    // Duration of the animation in milliseconds (1 second)
-                    easing: 'ease',    // Easing function for smoothness
-                    delay: 200         // Delay before the animation starts (in milliseconds)
-                });
-            </script>
-
-            <script>
-                // ScrollReveal for section transitions
-                ScrollReveal().reveal('.page-transition', {
-                    origin: 'top',  // Origin from top
-                    distance: '50px', // Move distance
-                    duration: 1000,    // Animation duration
-                    easing: 'ease',    // Smooth easing function
-                    delay: 200         // Delay before animation starts
-                });
-
-
-                // ScrollReveal for testimonials
-                ScrollReveal().reveal('.testimonial', {
-                    origin: 'left',  // Slide in from left
-                    distance: '100px',
-                    duration: 1000,
-                    delay: 200,
-                    opacity: 0,       // Fade-in effect
-                    reset: true       // Reset when out of view
-                });
-
-                // ScrollReveal for other elements
-                ScrollReveal().reveal('.smile', {
-                    origin: 'right',  // Slide in from right
-                    distance: '50px',
-                    duration: 4000,
-                    delay: 500
-                });
-
-            </script>
-
+<footer class="text-center py-10 mt-10 border-t border-gray-700">
+    <p class="text-gray-400">&copy; 2025 My Portfolio. All Rights Reserved.</p>
+</footer>
 
 </body>
-
 </html>
